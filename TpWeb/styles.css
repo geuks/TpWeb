@@ -1,0 +1,179 @@
+/*
+Theme Name: Theme Pascal ludus1B
+Theme URI: ludus1B.com
+Author: Gokhan UNALAN
+Description: Theme css pour pascal Ludus1B
+Version: 1.0
+License: Ludus1B
+License URI: Ludus1B.com
+Text Domain: ludus1B
+*/
+
+* {
+	color:black;
+	margin:0px;
+}
+
+body {
+	margin:0px;
+	display:flex;
+	flex-direction:column;
+	background-color:#3a3f3e;
+}
+
+header {
+	height:340px;
+	text-align:center;
+	background-image:url(images/pascal.png);
+	background-repeat:no-repeat;
+	background-size:100%;
+	border-bottom:solid 2px #252A29;
+	margin:0px;
+}
+
+/*Texte*/
+
+p {
+	color:black;
+	margin:15px;
+}
+
+.souligne {
+	text-decoration:underline;
+}
+
+.gras {
+	font-weight: bold;
+}
+
+.fond {
+	background-color:white;
+}
+
+.quote {
+	background-color:white;
+	border:solid 1px grey;
+	border-radius:5px;
+	width:50%;
+	margin:4% 25%;
+}
+
+.quote ul {
+	text-decoration: none;
+	list-style-type:none;
+}
+
+.rappel {
+	background-color:white;
+	margin:4% 0%;
+}
+
+.exercice {
+	border:solid 2px grey;
+	margin:4% 25%;
+	width:50%;
+}
+
+h3 {
+	color:white;
+	text-align:center;
+	background-color:#3a3f3e;
+	margin-bottom:20px;
+	border:solid 5px #cccccc;
+}
+/*FIN*/
+
+/*Images */
+#hello {
+	width:50%;
+	margin:2% 25%;
+}
+
+/*Fin*/
+
+
+/*Menu deroulent*/
+nav {
+	margin-top:18px;
+	margin-bottom:18px;
+	margin-left:5px;
+	color:black;
+	width:auto;
+	height:100%;
+	background-color:#252A29;
+	border:solid 2px #3a3f3e;
+	float: left;
+}
+
+#menu-vertical{
+  padding:0px;
+  margin-top:5px;
+  width:100%;
+}
+
+.menu {
+	border: solid 1px white;
+  background:#cccccc;
+	margin-right:5px;
+	font-variant:small-caps;
+	margin:3px;
+	font-size:5mm;
+}
+
+.menu ul li {
+	border-top:solid 1px white;
+	text-decoration: none;
+}
+
+.sous-menu {
+	font-size:4mm;
+  display:block;
+  text-decoration: none;
+	margin-left:5px;
+}
+
+#menu-vertical a:hover {
+	color:white;
+}
+/*fin menu*/
+
+/*partie droite*/
+section {
+	display:flex; 
+  flex-direction:row; 
+	flex:1;
+}
+
+.cours {
+	display:flex;
+	flex-direction:column;
+	height:auto;
+}
+
+.categorie {
+	display:flex;
+	flex-direction:column;
+	margin:30px 10px 10px 10px;
+	padding-bottom:10px;
+	background-color:#cccccc;
+}
+
+article {
+	padding:10px;	
+	margin:5px 10px 50px 20px;
+	background:#cccccc;
+  flex:1;
+	border:solid 3px #252A29;
+}
+/*fin*/
+
+
+footer {
+	clear:both;
+	display:flex;	
+	justify-content:center; 
+	background-color:#cccccc;
+	border-top:solid 2px #252A29;
+	padding:3px;
+	margin-top:15px;
+}

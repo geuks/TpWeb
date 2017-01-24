@@ -1,0 +1,1711 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+			<title>Pascal</title>
+			<meta charset="utf-8" />
+	<link href="styles.css" rel="stylesheet" type="text/css"> 
+	</head>
+
+
+
+	<body>
+		
+
+		<header>
+			
+			<h1 id="haut"></h1> <!--Encre pour remonter -->
+			
+		</header>
+
+		<section>
+			<!-- Menu -->
+			<nav>
+				<ul id="menu-vertical">
+				
+					<li class="menu"><a href="#Introduction">Introduction</a>
+						<ul>
+							<li class="sous-menu"><a href="#Logiciels">Les logiciels</a></li>
+							<li class="sous-menu"><a href="#Languages">Languages</a></li>
+						</ul>
+					</li>
+					
+					<li class="menu"><a href="#Programme">Premier programme</a></li>
+					
+					<li class="menu"><a href="#Constantes">Constantes</a></li>
+					
+					<li class="menu"><a href="#Affectation">Instruction d'affectation</a></li>
+					
+					<li class="menu"><a href="#Types">Types de variables standard</a>
+						<ul>
+							<li class="sous-menu"><a href="#Entiers">Entiers</a></li>
+							<li class="sous-menu"><a href="#Reels">Réels</a></li>
+							<li class="sous-menu"><a href="#Booleens">Booléens</a></li>
+							<li class="sous-menu"><a href="#Caracteres">Caractères</a></li>
+						</ul>
+					</li>
+					
+					<li class="menu"><a href="#Fonction">Fonction</a></li>
+					
+					<li class="menu"><a href="#Instruction">Instruction</a></li>
+					
+					<li class="menu"><a href="#StructureControles">Structure de contrôles</a>
+						<ul>
+							<li class="sous-menu"><a href="#While">Boucle WHILE - DO</a></li>
+							<li class="sous-menu"><a href="#Repeat">Boucle REPEAT - UNTIL</a></li>
+							<li class="sous-menu"><a href="#For">Boucle FOR - DO</a></li>
+							<li class="sous-menu"><a href="#If">Instruction IF - END</a></li>
+							<li class="sous-menu"><a href="#Case">Structure CASE - OF </a></li>
+						</ul>
+					</li>
+					
+					<li class="menu"><a href="#Tableaux">Tableaux</a>
+						<ul>
+							<li class="sous-menu"><a href="#Unidim">Unidimensionnels</a></li>
+							<li class="sous-menu"><a href="#Chaine">Chaine de caractères</a></li>
+							<li class="sous-menu"><a href="#DeTab">De tableaux</a></li>
+						</ul>
+					</li>
+					
+					<li class="menu"><a href="#ProFonction">Procédures et Fonctions</a>
+						<ul>
+							<li class="sous-menu"><a href="#Generalites">Généralités</a></li>
+							<li class="sous-menu"><a href="#Structure">Structure</a></li>
+							<li class="sous-menu"><a href="#Declaration">Portée des déclarations</a></li>
+							<li class="sous-menu"><a href="#Parametre">Argument (Paramètres)</a></li>
+							<li class="sous-menu"><a href="#LesFonctions">Les fonctions</a></li>
+						</ul>
+					</li>
+					
+					<li class="menu"><a href="#Correction">Correction des exercices</a>
+						<ul>
+							<li class="sous-menu"><a href="#puiss">ex_puiss</a></li>
+							<li class="sous-menu"><a href="#jeu">ex_jeu</a></li>
+							<li class="sous-menu"><a href="#moy">ex_moy</a></li>
+							<li class="sous-menu"><a href="#jeu_bis">ex_jeu_bis</a></li>
+							<li class="sous-menu"><a href="#calc">ex_calc</a></li>
+							<li class="sous-menu"><a href="#moy_a">moy_a</a></li>
+							<li class="sous-menu"><a href="#rot_b">rot_b</a></li>
+							<li class="sous-menu"><a href="#clas_c">clas_c</a></li>
+							<li class="sous-menu"><a href="#ex_str">ex_str</a></li>
+							<li class="sous-menu"><a href="#mat">mat</a></li>
+						</ul>
+					</li>
+					
+				</ul>
+			
+			</nav>
+			<!-- Fin menu -->
+		
+			
+			<!--partie droite-->
+			<section class="cours">
+				
+				<!-- Categorie -->
+				<section class="categorie">
+				<h3 id="Introduction">Introduction</h3>
+					
+					<!--Sous categorie-->
+					<article>
+						<h3 id="Logiciels">Les logiciels</h3>
+						
+						<img id="hello" src="images/Hello_world.png" alt="Hello"/>
+						
+						<p>Dans la majorité des cas, on achète des programmes (logiciels) tout faits qui correspondent plus ou moins au besoin :
+						<ul>
+							<li><span class="souligne">Traitement de texte</span> : avec mise en page, justification, numérotation, chapitres-pages, table des matières, dictionnaire...</li>
+							<li><span class="souligne">Tableur</span> : tableau de nombre à 2 dimensions et calculs</li>
+							<li><span class="souligne">Base de données</span> : ensemble de fiches (nom, adresse...) et recherche par rubrique, publipostage...</li>
+							<li><span class="souligne">C.A.O, Dessin par ordinateur</span> : propre, modification aisée, archivage...</li>
+							<li><span class="souligne">Gestion</span> : paye, facturation, stock...</li>
+							<li><span class="souligne">Communication</span> : transfert de programmes par modem et ligne téléphonique, serveur minitel...</li>
+						</ul></p>
+						
+						<p>Un <span class="souligne">intégré</span> regroupe plusieurs de ces possibilités.</p>
+						
+						<p>Soit on achète un logiciel général : très bon niveau, parfaitement testé, documentation, formation... mais trop général (fonctions inutiles, fonctions utiles avec trop de paramètres ou difficilement accessibles); soit on fait (ou fait faire) un logiciel particulier : plus pratique, mais plus hasardeux (erreurs, SAV, doc...). Le cahier des charges doit être très précis.</p>
+						<h3><a href="#haut">#</a></h3>
+					</article>
+					<!-- Fin Sous categorie-->
+					
+					
+					<!--Sous categorie-->
+					<article>
+						<h3 id="Languages">Langages de programmation</h3>
+						
+						<p>Un ordinateur est une machine bête, ne sachant qu'obéir, et à très peu de choses :</p>
+						
+						<ul>
+							<li>Addition, soustraction, multiplication en binaire, uniquement sur des entiers;</li>
+							<li>Sortir un résultat ou lire une valeur binaire (dans une mémoire par exemple);</li>
+							<li>Comparer des nombres.</li>
+						</ul>
+						
+						<p>Sa puissance vient du fait qu'il peut être <span class="gras">programmé</span>, c'est à dire que l'on peut lui donner, à l'avance, la séquence (la suite ordonnée) des ordres à effectuer l'un après l'autre. Le grand avantage de l'ordinateur est sa rapidité. Par contre, c'est le programmeur qui doit <span class="gras">tout</span> faire. L'ordinateur ne comprenant que des ordres codés en binaire (le langage machine), des langages dits "évolués" ont été mis au point pour faciliter la programmation.</p>
+						
+						
+						<p>Le <span class="gras">Pascal</span>, créé par <span class="gras">Wirth</span> au début des années 70, possède des instructions assez claires (si vous comprenez l'anglais) et favorise une approche méthodique et disciplinée (on dit "structurée").</p>
+						
+						<p>Le Pascal est un langage <span class="gras">compilé</span>, c'est-à-dire qu'il faut :</p>
+						
+						<ul>
+							<li>Entrer un texte dans l'ordinateur (à l'aide d'un programme appelé <span class="gras">éditeur</span>);</li>
+							<li>Le traduire en langage machine (c'est-à-dire en codes binaires compréhensibles par l'ordinateur) : c'est la <span class="gras">compilation</span> et éventuellement l'<span class="gras">édition de liens</span> (<span class="gras">Link</span>);</li>
+							<li>L'exécuter.</li>
+						</ul>
+						
+						<p>Contrairement à un Basic interprété, l'exécution sera beaucoup plus rapide puisqu'il n'y a plus de traduction à effectuer.</p>
+
+						<p>Bien que le langage soit normalisé, un certain nombre de points dépendent de la machine et du compilateur utilisé (par exemple, comment appeler le compilateur). Ces indications ne seront pas données ici. Si vous avez le choix, je vous conseille <span class="gras">Turbo Pascal</span>, le plus pratique d'emploi (en particulier parce qu'il possède son propre éditeur de texte).</p>
+						
+					
+						<h3><a href="#haut">#</a></h3>
+					</article>
+					<!-- Fin Sous categorie-->
+				</section>
+				<!--Fin categorie-->
+				
+				<!--Categorie-->
+				<section class="categorie">
+					<h3 id="Programme">Premier programme</h3>
+					
+					<p>Un programme Pascal est composé d'une entête, des déclarations et des instructions (délimitées par <span class="fond">BEGIN</span> et <span class="fond">END</span>).</p>
+					
+					<div class="quote">
+					<p>PROGRAM cercle (input,output); (* entête *)</p>
+					<p>VAR</p>
+					<ul>
+						<li>	perimetre, diametre : REAL; (* déclarations *)</li>
+					</ul>
+					<p>BEGIN</p>
+					<ul>
+						<li>readln(diametre); (* instruction *)</li>
+						<li>perimetre := 3.141592 * diametre; (* instruction *)</li>
+						<li>writeln(diametre,perimetre) (* instruction *)</li>
+					</ul>
+					<p>END.</p></div>
+				
+					
+					<p>L'<span class="gras">entête</span> est composée du mot <span="fond">PROGRAM</span>, suivi du nom du programme (cercle), et d'indications sur les Entrées/Sorties (ici le clavier et l'écran).</p>
+					
+					<p>La partie déclarative de notre programme est limitée à la déclaration de deux variables (mot-clef <span="fond">VAR</span>). Une <span class="gras">variable</span> est une "case" mémoire de l'ordinateur, à laquelle on donne ici un nom. Chaque case peut contenir une valeur. On a précisé ici que nos deux variables perimetre et diametre contiendraient des réels.</p>
+					
+					<p>Les types simples connus en Pascal sont :</p>
+					
+					<ul>
+						<li><span class="fond">REAL</span>(entier naturel);</li>
+						<li><span class="fond">INTEGER</span>(contient un est un seul caractère);</li>
+						<li><span class="fond">CHAR</span>(contient un est un seul caractère);;</li>
+						<li><span class="fond">BOOLEAN</span>(booléen, c'est-à-dire qui peut valoir soit <span class="fond">TRUE</span> (vrai) soit <span class="fond">FALSE</span> (faux).</li>
+					</ul>
+					
+					<p>En Turbo Pascal, les <span class="gras">entiers</span> admissibles sont compris entre <span class="gras">-32768</span> et <span class="gras">+32767</span>. (2) Tous les compilateurs Pascal possèdent une constante prédéclarée <span class="fond">MAXINT</span>, qui donne le plus grand entier admissible.</p>
+					
+					<p>Les <span class="gras">réels</span> doivent être compris en Turbo Pascal entre + <span class="gras">et -1.7E37</span> (c'est-à-dire 1,7 fois 10 puissance 37), avec 11 chiffres significatifs. La virgule décimale est toujours représentée par un point en informatique.</p>
+					
+					<p>Un <span class="gras">identificateur</span> (tout nom que vous choisissez : variable, programme...) peut être formé de lettres (A à Z), de chiffres et (pas sur toutes les versions de Pascal) du signe _ (souligné). Turbo Pascal accepte des noms de 127 caractères maximum, certains Pascal sont plus limités (31 caractères par ex). Le premier caractère doit être une lettre. Par exemple, valeur1 ou prem_valeur sont possibles mais pas 1ere_valeur. En Pascal, <span class="gras">les minuscules sont traitées comme des majuscules</span> (SURface et surFACE désignent la même case mémoire). Je n'utilise les majuscules que pour faire ressortir les mots importants. Les accents et autres ç ne sont pas autorisés (var diamètre : real est interdit à cause de l'accent). Un blanc dans un identificateur est également interdit (utilisez _ pour séparer des mots dans un même identificateur).</p>
+					
+					<p>Toute variable utilisée dans un programme doit être <span class="gras">déclarée</span>.</p>
+					
+					<p>Les instructions de notre programme sont :</p>
+					
+					<ul>
+					
+						<li><span class="souligne">Lecture sur le clavier</span> : le programme s'arrête, attend que l'on donne une valeur à l'aide du clavier, met cette valeur dans la case diametre et continue lorsque l'on appuie sur la touche "<span class="gras">ENTREE</span>" ou "<span class="gras">RETURN</span>".</li>
+						
+						<li><span class="souligne">Calcul et affectation</span> : on multiplie le contenu de la case diametre par <span class="fond">PI</span> et on met le résultat dans la case perimetre. Le <span class="fond">:=</span> symbolise une flèche à gauche. Ce n'est PAS une égalité au sens mathématique, mais la copie d'une valeur dans une mémoire.</li>
+						
+						<li><span class="souligne">Ecriture sur l'écran</span> : on affiche sur l'écran le contenu des cases diametre (que l'on connaissait puisque nous l'avions donné) et perimetre (qui nous intéresse un peu plus). Ce programme affiche donc deux chiffres.</li>
+					
+					</ul>
+					
+					<p>Il serait plus parlant d'afficher également des commentaires par l'instruction :</p>
+					
+					<div class="quote">writeln('Diamètre : ',diametre,', Périmètre : ',perimetre);</div>
+					
+					<p>Les textes doivent être entourés de cotes (<span class="fond">'</span>). Les majuscules/minuscules sont significatives. Pour afficher une apostrophe, utiliser deux cotes ('l''exemple'). Pour sauter une ligne, utiliser WRITELN seul. </p>
+					
+					<p>Le programme doit toujours se terminer par un point.</p>
+					
+					<h3><a href="#haut">#</a></h3>
+				</section>
+				<!--Fin Categorie-->
+				
+				<!--Categorie-->
+				<section class="categorie">
+					<h3 id="Constantes">Constantes</h3>
+					
+					<p>Nous avons déjà utilisé des <span class="gras">variables</span> (on donne un nom à une mémoire). Mais on peut également utiliser des <span class="gras">constantes</span>, qui sont des valeurs qui restent fixes tout au long du programme et pour chaque exécution. On déclare les constantes avant de déclarer les variables, par :</p>
+					
+					<div class="quote">CONST nom = valeur;</div>
+					
+					<p><span class="souligne">Exemple</span> :</p>
+
+					<div class="quote">CONST taux_tva = 18.6;</div>
+					
+					<p><span class="fond">MAXINT</span> (plus grand entier possible) est une constante prédéfinie.</p>
+
+					<p>On peut également avoir des constantes de type "chaîne de caractères" :</p>
+
+					<div class="quote">
+					<p>PROGRAM bonjour (output); { on n'a pas besoin ici du clavier }</p>
+					<p>CONST </p>
+					<ul>
+						<li>	message1 = 'salut, ça va ?';</li>
+						<li>	message2 = 'moi ça baigne';</li>
+					</ul>
+					<p>BEGIN  </p>
+					<ul>
+						<li>	 writeln(message1); </li>
+						<li>	 writeln(message2) { notez l'absence de ; devant le END }</li>
+					</ul>
+					<p>END.</p></div>
+					
+					<p>Le type de la constante est déterminé automatiquement par le compilateur (entier si nombre sans point, réel si nombre avec point, caractères si entre cotes).</p>
+					
+					<p><span class="souligne">Remarque 1</span> : on peut toujours utiliser un entier à la place d'un réel mais pas l'inverse.</p>
+					
+					<p><span class="souligne">Remarque 2</span> : si on utilise un point décimal, il <span class="souligne">faut</span> l'encadrer de chiffres (0.3 et non .3, 10 ou 10.0 et non 10.).</p>
+					<h3><a href="#haut">#</a></h3>
+				</section>
+				<!--Fin categorie-->
+				
+				<!--Categorie-->
+				<section class="categorie">
+					<h3 id="Affectation">Instruction d'affectation</h3>
+					
+					<p>On appelle <span class="gras">affectation</span> la mise d'une valeur dans une variable. Celle-ci peut être sous forme directe (<span class="fond">A := B</span>) ou sous forme d'un calcul (<span class="fond">A := B * C</span>). Le signe <span class="fond">:=</span>  représente une flèche à gauche, et signifie "mettre la <span class="gras">valeur</span> à droite du := dans la mémoire désignée à gauche" (mettre le contenu de B dans A ou mettre le résultat du calcul (contenu de B) fois (contenu de C) dans A). Une affectation du type <span class="fond">B * C := A</span> est donc <span class="gras">impossible.</span></p> 
+					
+					<p>Une affectation ne peut se faire qu'entre une variable et une expression de même type (si A est réel, impossible de faire <span class="fond">A := 'xyz'</span>). La seule exception est de mettre un entier dans un réel (le .0 est rajouté automatiquement), mais l'inverse est impossible directement. 
+					Soient I entier et X réel, pour mettre X dans I il faut utiliser <span class="fond">I := Round(X)</span> (arrondi) ou  <span class="fond">I := Trunc(X)</span> (partie entière). </p>
+					
+					<p>On peut également utiliser des affectations et expressions booléennes. Par exemple, en ayant déclaré :</p>
+					
+					<div class="quote">
+					<p>VAR</p>
+					<ul>
+						<li>	test : boolean;</li> 
+						<li>	a, b : real;</li>
+					</ul>
+					</div>
+					
+					<p>on peut écrire :</p>
+					
+					<div class="quote">
+						<p>test := (a &lt; b) and (a > 0);</p>
+					</div>
+					<h3><a href="#haut">#</a></h3>
+				</section>
+				<!--Fin Categorie-->
+				
+				<!--Categorie-->
+				<section class="categorie">
+					<h3 id="Types">Type de variable standard</h3>
+					
+					<p>Tous ces types, excepté les réels, sont dits <span class="gras">scalaires.</span> </p>
+					
+					<!--Sous categorie-->
+					<article>
+						
+						<h3 id="Entiers">Entiers</h3>
+						<p><span class="souligne">Déclaration</span> :</p>
+						
+						<div class="quote">
+							<p>VAR variable1, variable2, ..., variableN : INTEGER;</p>
+						</div>
+						
+						<p><span class="souligne">Opérations sur entiers </span>:</p>
+						
+						<ul>
+							<li>+ (addition)</li>
+							<li>- (soustraction)</li>
+							<li>* (multiplication)</li>
+							<li>div (division)</li>
+							<li>mod (reste de la division)</li>
+						</ul>
+						
+						<p>Elles sont toutes à résultat entier et nécessitent deux arguments entiers.</p>
+						
+						<p>Les entiers sont compris entre <span class="fond">-(MAXINT + 1)</span> et <span class="fond">+MAXINT</span>, qui est une constante standard prédéfinie (sa valeur dépend par contre du compilateur, 32767 pour Turbo Pascal).</p>
+						
+						<h3><a href="#haut">#</a></h3>
+					</article>
+					<!--Fin Sous categorie-->
+					
+					<!--Sous categorie-->
+					<article>
+						
+						<h3 id="Reels">Réels</h3>
+						
+						<p><span class="souligne">Déclaration</span> :</p>
+					
+						<div class="quote">
+							<p>VAR variable1, variable2, ..., variableN : REAL;</p>
+						</div>
+						
+						<p><span class="souligne">Opérations</span> :</p>
+						
+						<ul>
+							<li>+ (addition)</li>
+							<li>- (soustraction)</li>
+							<li>* (multiplication)</li>
+							<li>/ (division)</li>
+						</ul>
+						
+						<p>Quand une opération comprend un argument réel et un entier, le résultat est réel. / donne toujours un résultat réel, même si les deux arguments sont entiers.</p>
+						
+						<p>* et / sont de priorité supérieure à + et -, mais entre * et / tout dépend du compilateur (en général de gauche à droite). En cas d'ambiguïté, utilisez des parenthèses (il n'y a aucun inconvénient à mettre plus de parenthèses que nécessaire). </p>
+						
+						<p>Exemples d'expressions numériques (soit A = 3, B = 4, C = 2) :</p>
+						
+						<ul>
+							<li>A + B / C = A + (B / C) = 5</li>
+							<li>(A + B) / C = 3.5</li>
+							<li>A / B * C = (A / B) * C (1.5) dans certains cas, A / (B * C) (0.375) dans d'autres</li>
+							<li>A / BC = valeur de A sur valeur de la variable de nom BC et non A sur B * C</li>
+							<li>B * A - 5 * C = (B * A) - (5 * C) = 2</li>
+						</ul>
+						
+						<h3><a href="#haut">#</a></h3>
+					</article>
+					<!--Fin Sous categorie-->
+					
+					<!--Sous categorie-->
+					<article>
+						<h3 id="Booleens">Booléens</h3>
+						
+						<p><span class="souligne">Déclaration</span> :</p>
+					
+						<div class="quote">
+							<p>VAR variable1, variable2, ..., variableN : BOOLEAN;</p>
+						</div>
+						
+						<p>Ces variables peuvent prendre soit la valeur <span class="fond">TRUE</span> (vrai), soit la valeur <span class="fond">FALSE</span>(faux).</p>
+						
+						<p><span class="souligne">Opérations booléennes</span> :</p>
+						
+						<ul>
+							<li><span class="fond">AND</span></li>
+							<li><span class="fond">OR</span></li>
+							<li><span class="fond">NOT</span></li>
+							<li><span class="fond">XOR</span> (ou exclusif)</li>
+						</ul>
+						
+						<p>Ces opérations nécessitent des arguments booléens.</p>
+						
+						<ul>
+							<li><span class="fond">></span> (supérieur)</li>
+							<li><span class="fond">></span> (inferieur)</li>
+							<li><span class="fond">>=</span> (supérieur ou égal)</li>
+							<li><span class="fond">&lt;=</span> (inférieur ou égal)</li>
+							<li><span class="fond">=</span> (égal)</li>
+							<li><span class="fond">&lt;></span> (différent)</li>
+						</ul>
+					
+						<p>Ces opérations comparent tous éléments de type simple (les 2 arguments doivent être de même type, sauf entiers et réels qui peuvent être comparés entre eux), et renvoient un booléen. Les caractères sont comparés suivant l'ordre du code ASCII.</p>
+						
+						<p><span class="fond">AND</span> (et), <span class="fond">OR</span> (ou), <span class="fond">NOT</span> (non), sont de priorité supérieure aux précédents et ne peuvent opérer que sur des booléens : A > B et C doit être écrit : <span class="fond">(A > B) and (A > C)</span>. Les parenthèses sont obligatoires pour ne pas faire en premier <span class="fond">B and A</span>.</p>
+					
+						<h3><a href="#haut">#</a></h3>
+					</article>
+					<!--Fin Sous categorie-->
+					
+					<!--Sous categorie-->
+					<article>
+					
+						<h3 id="Caracteres">Caractères</h3>
+						
+						<div class="quote">VAR variable1, variable2, ..., variableN : CHAR;</div>
+						
+						<p>Ces variables contiennent <span class="gras">un</span> caractère. Ceux-ci sont classés suivant un ordre précis: le code ASCII, qui suit l'ordre suivant :</p>
+
+						<ul>
+							<li>Les chiffres '0' à '9' par ordre croissant;</li>
+							<li>Les majuscules 'A' à 'Z' par ordre alphabétique;</li>
+							<li>Les minuscules 'a' à 'z'.</li>
+						</ul>
+						
+						<p>Dans le code ASCII, chaque caractère possible a un numéro de code. Par exemple A a pour code 65. En déclarant C comme variable caractère, on peut mettre le signe A dans C par  <span class="fond">C := 'A'</span> ou <span class="fond">C := Chr(65)</span>. Dans le premier cas, il faut mettre les cotes pour différencier 'A' de la variable A. Pour mettre une cote dans C, on peut faire <span class="fond">C := Chr(39)</span> ou  <span class="fond">C := ''''</span> : la 1ère cote pour dire qu'il va y avoir un caractère, les 2 suivantes qui symbolisent la cote (car une seule cote voudrait dire fin du caractère), la dernière qui signifie fin du caractère.</p>
+					<h3><a href="#haut">#</a></h3>
+					</article>		
+					<!--Fin Sous categorie-->
+					
+				</section>
+				<!--Fin Categorie-->
+				
+				<!--Categorie-->
+				<section class="categorie">
+					<h3 id="Fonction">Les fonctions standard</h3>
+					
+					<p>On peut utiliser comme une variable des fonctions (qui peuvent soit être connues par le compilateur, soit définies par vous-même). Une fonction est un "module" ou "routine" qui renvoie une valeur au programme. Par exemple, <span class="fond">A := sqrt(B * C)</span> met dans A la racine carrée de B fois C.  <span class="fond">B * C</span> est appelé argument de la fonction.</p>
+					
+					<ul>
+						<li><span class="fond">ABS</span> : renvoie la valeur absolue</li>
+						<li><span class="fond">SQR</span> : renvoie le carré</li>
+						<li><span class="fond">SQRT</span> : racine carré</li>
+						<li><span class="fond">EX</span> : exponentielle</li>
+						<li><span class="fond">LN</span> : log népérien</li>
+						<li><span class="fond">SIN</span> : sinus</li>
+						<li><span class="fond">COS</span> : cosinus</li>
+						<li><span class="fond">ARCTAN</span> : arc tengente</li>
+						<li><span class="fond">SUCC</span> : variable énumérée suivante</li>
+						<li><span class="fond">PRED</span> : précédent</li>
+						<li><span class="fond">ROUND</span> : arrondi à l'entier le plus proche</li>
+						<li><span class="fond">TRUNC</span> : partie entière (permet de mettre un réel dans un entier : <span class="fond">trunc(4.5)</span> = 4)</li>
+					</ul>
+					
+					<p>Comme toute variable, une fonction possède un type (entier, réel,...) défini, et ne peut donc être utilisée que comme une variable de ce type.</p>
+					<h3><a href="#haut">#</a></h3>
+				</section>
+				<!--Fin Categorie-->
+				
+				<!--Categorie-->
+				<section class="categorie">
+				
+					<h3 id="Instruction">Instruction</h3>
+					
+					<p>On appelle <span class="gras">instruction simple</span> soit :</p>
+					
+					<ul>
+						
+						<li>Une affectation;</li>
+						<li>Un appel à une procédure (une procédure est un ensemble d'instructions regroupées sous un nom, par exemple <span class="fond">READLN</span>);</li>
+						<li>Une structure de contrôle (voir plus bas).</li>
+						
+					</ul>
+					
+					<p>On appelle <span class="gras">instruction composée</span> le regroupement de plusieurs instructions sous la forme :</p>
+
+					<div class="quote">
+						<p>BEGIN instruction1; instruction2; ... ; instructionN END</p>
+
+					</div>
+					
+					<p>On ne met pas de ; après <span class="fond">BEGIN</span> ni avant <span class="fond">END</span> (puisque le ; sépare deux instructions). Par contre, si l'instruction composée est suivie d'une autre instruction, on mettra un ; après le <span class="fond">END</span>.</p>
+					
+					<p><span class="souligne">Remarque</span> : La lisibilité du programme sera meilleure en mettant une instruction par ligne, et en décalant à droite les instructions comprises entre un <span class="fond">BEGIN</span> et un <span class="fond">END</span> :</p>
+					
+					<div class="quote">
+						<p>BEGIN</p> 
+						<ul>
+							<li>	instruction1;</li>
+							<li>	instruction2;</li>
+							<li>	instructionN</li>
+						</ul>
+						<p>END </p>
+
+					</div>
+					
+					<p>On appelle <span class="gras">instruction</span> une instruction soit simple soit composée.</p>
+					<h3><a href="#haut">#</a></h3>
+				</section>
+				<!--Fin Categorie-->
+				
+				<!--Categorie-->
+				<section class="categorie">
+					
+					<h3 id="StructureControles">Suctures de contrôle</h3>
+					
+					<p>Nos connaissances actuelles ne nous permettent pas de faire des programmes utilisant la capacité de l'ordinateur de répéter rapidement et sans erreur beaucoup de calculs. Nous allons donc remédier immédiatement à cela. Chaque structure de contrôle forme une instruction (qui peut donc être utilisée dans une autre structure de contrôle).</p>
+					
+					<!--Sous categorie-->
+					<article>
+					
+						<h3 id="While">Boucle WHILE - DO (tant que - faire)</h3>
+					
+						<div class="quote">
+							<p>WHILE expression booléenne DO instruction</p>
+						</div>
+						
+						<p>Elle permet de répéter l'instruction tant que l'expression (ou la variable) booléenne est vraie.</p>
+						
+						<div class="quote">
+							<p>PROGRAM racine_a_deux_decimales (input, output);</p>  
+							<p>VAR</p>
+							<ul>
+								<li>nombre, racine : REAL;</li>
+							</ul>
+							<p>BEGIN </p>
+							<ul>
+								<li>	writeln('Entrez un réel entre 0 et 10');</li>  
+								<li>	readln(nombre);</li> 
+								<li>	racine := 0;</li>  
+								<li>	WHILE racine * racine &lt; nombre DO </li>  
+								<li>		racine := racine + 0.01; </li>
+								<li>	writeln('La racine de ',nombre,' vaut à peu près',racine)</li>
+							</ul>
+							<p>END.</p>
+						</div>
+						
+						<p>Il faut noter que si l'expression booléenne est fausse dès le début, l'instruction n'est jamais exécutée (ici si <span class="fond">nombre</span> = 0). Attention, Pascal n'initialise pas automatiquement les variables à 0, c'est-à-dire que sans l'instruction <span class="fond">racine</span> := 0, le programme risquerait de donner une réponse fausse (<span class="fond">racine</span> valant n'importe quoi, il sera en général très supérieur à la racine cherchée).</p>
+						
+						<p>On ne peut répéter qu'<span class="gras">une seule</span> instruction. Mais celle-ci peut être simple (comme dans l'exemple précédent) ou composée (<span class="fond">begin</span> - <span class="fond">end</span>).</p>
+						
+						<div class="exercice">
+							<p><span class="souligne">Exercice</span> <span class="gras">ex_puiss</span> :</br>
+							Faire un programme qui affiche les puissances de 2 jusqu'à une valeur maxi donnée par l'utilisateur (par multiplication successive par 2).</br>
+							<a href="#puiss" target="_blank">Voir la correction</a></p>
+						</div>
+						<h3><a href="#haut">#</a></h3>
+					</article>
+					<!-- Fin Sous categorie-->
+					
+					<!--Sous categorie-->
+					<article>
+					
+						<h3 id="Repeat">Boucle REPEAT - UNTIL (répéter - jusqu'à ce que)</h3>
+						
+						<p><span class="souligne">Structure</span> :</p>
+						
+						<div class="quote">
+						<p>REPEAT  </p>
+						<ul>
+							<li>	instruction1;  </li>
+							<li>	instruction2; </li> 
+							<li>	...etc... </li>
+							<li>	instructionN  </li>
+						</ul>
+						<p>UNTIL condition</p>
+						</div>
+						
+						<p>Les N instructions sont répétées jusqu'à ce que la condition soit vérifiée. Même si la condition est vraie dès le début, elles sont au moins exécutées une fois.</p>
+						
+						<div class="quote">
+						
+							 
+							<p>PROGRAM jeu_simpliste (input,output); </p>
+							
+							<p>VAR</p>
+							<ul>	
+							
+							<li>a : integer;</li>
+							
+							</ul>
+							<p>BEGIN</p>
+							<ul>	
+								<li>writeln('Entrez le nombre 482');</li>  
+								<li>REPEAT </li>
+								<ul>
+									<li>readln(a)</li>
+								</ul>
+								<li>UNTIL a = 482;</li>
+								<li>writeln('C''est gentil de m''avoir obéi')</li>
+							
+							</ul>
+							<p>END.</p>
+							
+						</div>
+						
+						<p>Quelle que soit la valeur initiale de A (même 482), la question sera au moins posée une fois (plus si vous désobéissez).</p>
+						
+						
+						<div class="exercice">
+							<p><span class="souligne">Exercice</span> <span class="gras">ex_jeu</span> :</br>
+							Faire un jeu qui demande de trouver le nombre entre 0 et 10 choisi par l'ordinateur (en comptant les coups).</br>
+							On utilisera la fonction <span class="fond">Random(N)</span> (non standard, disponible en Turbo Pascal) qui renvoie un entier entre 0 et N-1 compris, par l'instruction <span class="fond">valeur_choisie := Random(11)</span>.</br>
+							<a href="#jeu" target="_blank">Voir la correction</a></p>
+						</div>
+						<h3><a href="#haut">#</a></h3>
+					</article>
+					<!--Fin Sous categorie-->
+					
+					<!--Sous categorie-->
+					<article>
+					
+						<h3 id="For">Boucle FOR - DO (pour - faire)</h3>
+						
+						<p><span class="souligne">Structure</span> :</p>
+						
+						<div class="categorie">
+							<p>FOR variable := valeur_début TO valeur_fin DO instruction</p>
+						</div>
+						
+						<p>La variable_énumérée (non réelle) prend la <span class="fond">valeur_début</span>, et l'instruction est exécutée. Puis elle est incrémentée (on passe à la suivante, c'est-à-dire que, si elle est entière, on ajoute 1), et ce jusqu'à <span class="fond">valeur_fin</span> (comprise).</p> 
+					
+						<p>L'instruction sera donc exécutée (valeur_fin - valeur_début + 1) fois. Si <span class="fond">valeur_ fin</span> est inférieure à <span class="fond">valeur_début</span>, l'instruction n'est jamais exécutée. Cette forme de boucle est utilisée chaque fois que l'on connaît le nombre de boucles à effectuer.</p> 
+						
+						<p>On peut utiliser un <span class="gras">pas dégressif</span> en remplaçant <span class="fond">TO</span> par <span class="fond">DOWNTO</span> :</p>
+						
+						
+						<div class="quote">
+						
+							<p>for lettre := 'Z' downto 'A' do </p>
+							<ul>
+								<li>writeln(lettre)</li>
+							</ul>
+							
+						</div>
+						
+						<p>Dans cet exemple, on écrit l'alphabet à l'envers (en déclarant <span class="fond">lettre</span> du type <span class="fond">CHAR</span>).</p> 
+						
+						<p>La <span class="fond">variable</span> peut être utilisée (mais pas modifiée) dans l'instruction (simple ou composée). Elle est souvent appelée <span class="gras">indice</span> de la boucle. Sa valeur est perdue dès que l'on sort de la boucle.</p>
+
+
+						<div class="exercice">
+							<p><span class="souligne">Exercice</span> <span class="gras">ex_moy</span> :</br>
+							Faire un programme qui calcule la moyenne de N nombres. N doit être demandé par un READLN.</br>
+							(initialiser une variable à 0, y ajouter progressivement chaque note puis diviser par N).</br>
+							<a href="#moy" target="_blank">Voir la correction</a></p>
+						</div>
+						
+						<h3><a href="#haut">#</a></h3>
+					</article>
+					<!--Fin Sous categorie-->
+					
+					<!--Sous categorie-->
+					<article>
+					
+						<h3 id="If">Instruction IF - THEN - ELSE (si - alors - sinon)</h3>
+						
+						<p><span class="souligne">Structure</span> :</p>
+					
+						<div class="quote">
+							
+							<p>IF condition THEN instruction1 (* CAS 1 *)</p>
+							 <p>{ ou }</p>  
+							<p>IF condition THEN instruction1 </p>
+							<p>ELSE</p> 
+							<ul>
+								<li>instruction2 (* CAS 2 *)</li>
+							</ul>
+						</div>
+						
+						<p>Si la condition est vraie, alors on exécute l'instruction1 (simple ou composée). Sinon, on passe à la suite (cas 1), ou on exécute l'instruction2 (cas 2).</p>
+						
+						<p>Remarquez qu'il n'y a pas de ; devant le <span class="fond">ELSE</span>.</p>
+						
+						<div class="exercice">
+							<p><span class="souligne">Exercice</span> <span class="gras">ex_jeu_bis</span> :</br>
+							Modifier le jeu précédent (ex_jeu) en aidant le joueur (en précisant si c'est plus ou c'est moins).</br>
+							<a href="#jeu_bis" target="_blank">Voir la correction</a></p>
+						</div>
+						
+						<p>L'instruction2 peut être composée ou entre autres être une instruction <span class="fond">IF</span> :</p>
+						
+						<div class="quote">
+						
+							<p>IF condition1 THEN  </p>
+							<ul>
+								<li>instruction1</li>
+							</ul>
+							<p>ELSE IF condition2 THEN</p>
+							<ul>
+								<li>instruction2</li>
+							</ul>
+							<p>ELSE IF condition3 THEN</p>
+							<ul>
+								<li>instruction3</li>
+								<li>......</li>
+							</ul>
+							<p>ELSE instructionN</p>					
+						
+						</div>
+						
+						<p>Un <span class="fond">ELSE</span> correspond toujours au dernier <span class="fond">IF</span> rencontré (mais dont on n'a pas encore utilisé le <span class="fond">ELSE</span>).</p>
+						
+						<div class="quote">
+						
+							<p>IF cond1 THEN </p>
+							<ul>
+								<li>IF cond2 THEN</li>
+								<ul>
+									<li>inst1 { cond1 et cond2 }</li>
+								</ul>
+								<p>ELSE inst2 { cond1 et pas cond2 }</p>
+							</ul>
+							<p>ELSE IF cond3 THEN</p>
+							<ul>
+								<li>inst3 { pas cond1 mais cond3 }</li>
+							</ul>
+							<p>ELSE inst4 { ni cond1 ni cond3 }</p>
+							
+						</div>
+						
+						
+						<p>Si on désire autre chose, utiliser <span class="fond">BEGIN</span> et <span class="fond">END</span> :</p>
+						
+						
+						<div class="quote">
+						
+							<p>IF cond1 THEN</p>  
+							<p>BEGIN</p>  
+							<ul>
+								<li>if cond2 then</li>
+								<ul>
+									<li>inst1</li>
+								</ul>
+							</ul>
+							<p>END { le prochain ELSE se rapporte à COND1 puisque l'instruction (composée) suivant THEN est terminée } </p>
+							<p>ELSE inst2</p>
+						
+						</div>					
+						
+						<h3><a href="#haut">#</a></h3>
+					</article>
+					<!--Fin Sous categorie-->
+					
+					<!--Sous categorie-->
+					<article>
+					
+						<h3 id="Case">La structure CASE - OF (cas - parmi)</h3>
+						
+						<div class="quote">
+						
+							<p>CASE expression OF { regardez bien où j'ai mis les ; }</p>
+							<ul>							
+								<li>liste_de_cas1 : instruction1;</li> 
+								<li>liste_de_cas2 : instruction2;  </li>
+								<li>..... </li>
+								<li>liste_de_casN : instructionN</li>
+							</ul>
+							<p>END</p> 
+						
+						</div>
+						
+						
+						<p>L'instruction i sera exécutée si l'expression appartient à la liste_de_casi. Les autres ne seront pas exécutées (on passe directement au <span class="fond">END</span>). L'expression doit être de type scalaire (pas de réels).</p>
+						
+						<p>En Turbo Pascal, on accepte une liste_de_cas particulière qui est <span class="fond">ELSE</span> (et doit être placée en dernier), pour prévoir le cas où expression n'appartient à aucun des cas cités au dessus. En MS-Pascal on utilise de même <span class="fond">OTHERWISE</span>.</p>
+						
+						
+						<div class="quote">
+						
+							<p>CASE a * b OF { avec a et b déclarés entiers }</p>
+							<ul>
+								<li>0 : writeln('un des nombres est nul');</li>
+								<li>1, 10, 100, 1000, 10000 : writeln('le produit est une puissance de 10'); { 100000 est impossible en Turbo Pascal car supérieur à MAXINT } </li>
+							</ul>
+							<p>END</p>
+						
+						</div>
+						
+						<p>Attention, certains compilateurs n'acceptent pas de passer sur un <span class="fond">CASE</span> avec une valeur prévue dans aucune liste de cas.</p>
+						
+						<div class="exercice">
+							<p><span class="souligne">Exercice</span> <span class="gras">ex_calc</span> :</br>
+							Faire un programme simulant une calculatrice à 4 opérations en utilisant <span class="fond">CASE</span> pour le choix de l'opération à effectuer.</br>
+							<a href="#calc" target="_blank">Voir la correction</a></p>
+						</div>				
+					
+						<h3><a href="#haut">#</a></h3>
+					</article>	
+					<!--Fin Sous categorie-->					
+				
+				</section>
+				<!--Fin Categorie-->
+				
+				<!--Categorie-->
+				<section class="categorie">
+				
+					<h3 id="Tableaux">Tableaux</h3>
+					<!--Sous categorie-->
+					<article>
+					
+						<h3 id="Unidim">Tableaux unidimensionnels</h3>
+						
+						<p>On a souvent besoin de regrouper dans une seule variable (et donc un seul nom) plusieurs variables (exemple 3 coordonnées d'un même vecteur). On utilise pour cela les <span class="gras">tableaux</span>. La manière la plus simple des les définir est :</p>
+						
+						<div class="quote">
+						
+							<p>VAR nom_tableau : ARRAY [type_index] OF	type_composantes</p> 
+ 
+							<p>{Exemple} </p>
+							<p>CONST dimension = 3;</p>
+							<p>VAR vecteur1, vecteur2 : ARRAY [1..dimension] OF REAL;</p>
+						
+						</div>
+						
+						
+						<p>On peut utiliser le tableau complet (<span class="fond">vecteur1 := vecteur2</span>) pour l'affectation uniquement (<span class="fond">vecteur1 + vecteur2</span> est impossible directement). Mais on peut également accéder aux différentes composantes par un index (si <span class="fond">vecteur1</span> est le vecteur unitaire porté par Y, alors  <span class="fond">vecteur1[1] = 0,vecteur2[2] = 1, vecteur3[3] = 0)</span>.</p>
+						
+						<p>L'index peut être variable:</p>
+						<div class="quote">
+							<p>PROGRAM heures (input,output);</p>  
+							<p>VAR</p>
+							<ul>
+								<li>jour : integer; </li>
+								<li>nb_heures_cours : ARRAY[1..100] OF integer; </li>
+							</ul>
+							<p>BEGIN {il faudrait ici entrer les nombres d'heures	de cours par jour} </p>
+							<ul>
+								<li>FOR jour := 1 TO 24 DO </li>
+								<ul>
+									<li>writeln(nb_heures_cours[jour])</li>
+								</ul>
+							</ul>
+							<p>END.</p>
+						</div>
+						
+						
+						<p>On peut également définir un type tableau, par exemple :</p>
+						
+						<div class="quote">
+						
+							<p>TYPE</p>
+							<ul>
+								<li>typheures = ARRAY[1..100] OF integer;</li>
+							</ul>
+							<p>VAR</p>
+							<ul>
+								<li>nb_heures_cours : typheures;</li>
+							</ul>
+						
+						</div>
+						
+						
+						<div class="exercice">
+							<p><span class="souligne">Exercice</span> <span class="gras">moy_a</span> :</br>
+							Ecrire un programme qui lit une liste de N nombres, calcule et affiche la moyenne puis l'écart entre chaque note et cette moyenne.</br>
+							<a href="#moy_a" target="_blank">Voir la correction</a></p>
+						</div>	
+						
+						
+						<div class="exercice">
+							<p><span class="souligne">Exercice</span> <span class="gras">rot_b</span> :</br>
+							Ecrire un programme qui lit une liste de N nombres, la décale d'un cran vers le haut (le 1er doit se retrouver en dernier), l'affiche puis la décale vers le bas.</br>
+							<a href="#rot_b" target="_blank">Voir la correction</a></p>
+						</div>	
+						
+						
+						<div class="exercice">
+							<p><span class="souligne">Exercice</span> <span class="gras">clas_c</span> :</br>
+							Classer automatiquement une liste de n entiers par ordre croissant puis décroissant.</br>
+							<a href="#clas_c" target="_blank">Voir la correction</a></p>
+						</div>						
+					
+						<h3><a href="#haut">#</a></h3>
+					</article>
+					<!--Fin Sous categorie-->
+					
+					<!--Sous categorie-->
+					<article>
+					
+						<h3 id="Chaine">Les chaînes de caractères</h3>
+						
+						<p>On appelle <span class="gras">chaîne de caractères</span> une suite de caractères regroupés dans une seule variable. En Pascal standard, il faut la déclarer comme <span class="fond">ARRAY [1..nbcar] OF CHAR</span>. Les tests sont possibles entre chaines (test suivant l'ordre ASCII du 1er caractère, puis automatiquement du 2ème, etc).</p>
+						
+						<p><span class="souligne">Exemples</span> : 'aaz' &lt; 'aba' 'aa' &lt; 'aaa' 'ZZZ' &lt; 'aaa' (majuscules)</p>
+
+						<p>On peut également utiliser ces tableaux dans <span class="fond">READLN</span> et <span class="fond">WRITELN</span>.</p>
+						
+						<p>Mais en général, les compilateurs possèdent des types plus puissants, associés à des fonctions et procédures non standard. En Turbo Pascal, on déclare une chaîne par <span class="fond">String [nbcar]</span>. Une fonction utile est alors <span class="fond">Length(variable_string)</span>, qui donne la longueur de la chaîne (inférieure ou égale à la dimension déclarée).</p>
+						
+						
+						<div class="exercice">
+							<p><span class="souligne">Exercice</span> <span class="gras">ex_str</span> :</br>
+							Ecrire un programme qui détermine le nombre et les positions d'une chaîne dans une autre (par exemple : 'ON' dans 'FONCTION' : en position 2 et 7).</br>
+							<a href="#ex_str" target="_blank">Voir la correction</a></p>
+						</div>			
+						
+						<h3><a href="#haut">#</a></h3>
+					</article>
+					<!--Fin Sous categorie-->
+					
+					<!--Sous categorie-->
+					<article>
+					
+						<h3 id="DeTab">Tableaux de tableaux</h3>
+						
+						<p>On peut faire des tableaux avec des composantes de tous types, y compris de tableaux. On peut voir une matrice comme un tableau de lignes qui sont elles-mêmes des tableaux de composantes.</p>
+						
+						<p><span class="souligne">Exemple</span> : matrice 5 lignes, 10 colonnes :</p>
+						
+						<div class="quote">
+						
+							<p>TYPE</p>
+							<ul>
+								<li>ligne = array [1..10] of real;</li>
+								<li>mat = array [1..5] of ligne;</li>
+							</ul>
+						
+						</div>
+						
+						<p>Les écritures <span class="fond">TYPE mat = array [1..5] of array [1..10] of </span>real</br>
+						ou même <span class="fond">TYPE mat = array [1..5,1..10] of real</span></br>
+						sont strictement équivalentes (sauf si la définition du type ligne est nécessaire pour d'autres variables). </p>
+						
+						<p>Soit la déclaration</p>
+						
+						<div class="quote">
+						
+							<p>VAR</p>
+							<ul>
+								<li>m1,m2 : mat;</li>
+								<li>i, j: integer;</li>
+							</ul>
+							
+						</div>
+						
+						<p>on peut écrire :</p>
+						
+						<div class="quote">
+						
+							<p>m1[i,j] := 10;    {affectation de la valeur 10 en ligne i,colonne j}</p>
+
+							<p>m1[i] := m1[i + 1];	{copie complète de la ligne i+1 sur la ligne i}  </p>
+							<p>m2 := m1;		{copie de la matrice complète } </p>
+						</div>
+						
+						
+						<p>mais il est impossible d'accéder directement à une colonne.</p>
+						
+						<p class="rappel">
+							<span class="souligne">Rappel</span> : <span class="fond">READLN</span> et <span class="fond">WRITELN</span> ne s'appliquent qu'à des variables simples prédéfinies (c'est-à-dire les composantes, si celles-ci sont réelles, entières, chaînes ou booléennes).
+						</p>
+
+
+						<div class="exercice">
+							<p><span class="souligne">Exercice</span> <span class="gras">mat</span> :</br>
+							Faire le calcul de multiplication d'une matrice (M lignes, L col) par (L lignes, N col) (résultat M lignes, N col).</br>
+							<a href="#mat" target="_blank">Voir la correction</a></p>
+						</div>
+						<h3><a href="#haut">#</a></h3>
+					
+					</article>
+					<!--Fin Sous categorie-->
+					
+				</section>
+				<!--Fin Categorie-->
+				
+				<!--Categorie-->
+				<section class="categorie">
+				
+					<h3 id="ProFonction">Procédures et Fonctions</h3>
+						
+					<p>Nous avons déjà vu un certain nombre de <span class="gras">procédures</span> (<span class="fond">WRITELN</span>) et <span class="gras">fonctions</span> (<span class="fond">SQRT</span>,  <span class="fond">SIN</span>...) prédéfinies par le compilateur. Mais si l'on en désire d'autres, il suffit de les définir.</p>
+					
+					<!--Sous categorie-->
+					<article>
+						<h3 id="Generalites">Généralités</h3>
+						
+						<p>On peut regrouper un ensemble d'instructions sous un même nom. On forme alors un <span class="gras">sous-programme</span> ou procédure. On utilise les procédures :</p>
+						
+						<ul>
+							<li>Chaque fois qu'une même suite d'instructions doit être répétée plusieurs fois dans un programme;</li>
+							<li>Quand une suite d'instructions forme une action globale. Le programme est alors plus clair et les erreurs plus facilement détectables.</li>
+						</ul>
+						
+						<p>Pour pouvoir utiliser une procédure, il faut d'abord la déclarer. La déclaration des procédures et fonctions se fait après toutes les autres déclarations.</p>
+						
+						<h3><a href="#haut">#</a></h3>
+					</article>
+					<!-- Fin Sous categorie-->
+					
+					<!--Sous categorie-->
+					<article>
+					
+						<h3 id="Structure">Structure d'une entité de programme (routine)</h3>
+						
+						<ul>
+							<li>Entête</li>
+							<li>Déclaration des :
+							</br>- Labels; (pour les GOTO, déconseillé)
+							</br>- Constantes;
+							</br>- Types;
+							</br>- Variables.</li>
+							<li>Définition des sous-routines; (sous-programmes)</li>
+							<li>BEGIN
+							</br>... Instructions ...
+							</br>END.</li>
+						</ul>
+					
+						<p>Le programme principal comme les procédures et les fonctions ont toujours cette structure. L'entête est composée d'un mot clef (<span class="fond">PROGRAM</span>, <span class="fond">PROCEDURE</span> ou <span class="fond">FUNCTION</span>), suivi de l'identificateur (nom) de la routine, et de la liste des arguments entre parenthèses. Les arguments forment la liaison avec l'extérieur de la routine (clavier, écran et éventuellement fichiers pour le programme).</p>
+						
+						<div class="quote">
+						
+							<p>PROGRAM remplir (output);</p>
+							<ul>
+								<li>{entête du prog principal}</li>
+							</ul>
+
+							<p>VAR i : integer;</p>
+							<ul>
+								<li>{déclarations prog princ.}</li>
+								<li>{dont déclaration LIGNE}</li>
+							</ul>
+							
+							<p>PROCEDURE ligne(n:integer);</p>
+							<ul>	
+								<li>{entête de la procédure}</li>
+							</ul>
+							<p>var j : integer;</p>
+							<ul>
+								<li>{déclarations procédure}</li>
+							</ul>
+							<p>BEGIN</p>
+							<ul>
+								<li>{corps de la procédure}</li>
+								<li>for j := 1 to n do write('*');</li>
+								<li>writeln</li>
+							</ul>
+							<p>END;</p>
+
+							<p>BEGIN</p>
+							<ul>
+								<li>{instructions du prog princ}</li>
+								<li>for i := 1 to 25 do ligne(70)</li>
+							</ul>
+							<p>END.</p>
+						
+						</div>
+						
+						<p>La procédure <span class="fond">LIGNE</span> écrit N caractères '*' sur une même ligne. Le programme remplit donc l'écran (25 lignes 70 colonnes) d'étoiles.</p>
+						
+						<p>On peut appeler une procédure déclarée dans une routine n'importe où dans cette routine en indiquant simplement son nom comme si c'était une instruction. A l'appel d'une procédure, le programme interrompt son déroulement normal, exécute les instructions de la procédure, puis retourne au programme appelant et exécute l'instruction suivante. Tout ce passe donc comme si le nom de la procédure était remplacé dans le programme par les instructions de la procédure (avec n = 70).</p>
+						
+						<h3><a href="#haut">#</a></h3>
+					</article>
+					<!-- Fin Sous categorie-->
+					
+					<!--Sous categorie-->
+					<article>
+					
+						<h3 id="Declaration">Portées des déclarations</h3>
+						
+						<p>Celle-ci est symbolisée dans l'exemple ci-dessus par deux cadres : la variable <span class="fond">I</span> et la procédure <span class="fond">LIGNE</span> (avec un argument entier) sont déclarées dans <span class="fond">REMPLIR</span>, et donc connues dans tout le programme (rectangle extérieur). Par contre <span class="fond">N</span> et <span class="fond">J</span> sont déclarés dans <span class="fond">LIGNE</span> et ne sont connus (et utilisables) que dans le rectangle intérieur.</p>
+					
+						<p>En d'autres termes :</p>
+						
+						<ul>
+							<li>Une variable est <span class="gras">locale</span> pour une procédure X si elle est déclarée <span class="souligne">dans</span> X. Elle n'existe que dans X (et dans les procédures déclarées à l'intérieur de X). La routine qui comporte la procédure X ne peut donc pas accéder à cette variable locale.</li>
+							<li>Une variable est <span class="gras">globale</span> pour une procédure X si elle est déclarée dans une routine <span class="gras">englobant</span> la procédure X. Elle peut être utilisée dans la procédure. La modifier la modifie également dans la routine appelante (englobante).</li>
+						</ul>
+
+						<p>Si l'on avait déclaré une variable <span class="fond">I</span> dans la procédure <span class="fond">LIGNE</span> (au lieu de <span class="fond">N</span> ou <span class="fond">J</span>), celle-ci aurait été locale à la procédure, c'est à dire que, dans le programme principal, <span class="fond">I</span> désigne une autre case mémoire que dans la procédure. Modifier la variable locale <span class="fond">I</span> ne modifie pas la variable globale <span class="fond">I</span> (momentanément inaccessible).</p>
+						
+						<p><span class="souligne">Remarque</span> : Ceci s'applique à toutes les déclarations. En particulier, une procédure déclarée localement à l'intérieur d'une procédure est indéfinie à l'extérieur.</p>				
+					
+					
+						<h3><a href="#haut">#</a></h3>
+					</article>
+					<!-- Fin Sous categorie-->
+					
+					<!--Sous categorie-->
+					<article>
+					
+						<h3 id="Parametre">Arguments(ou paramètres)</h3>
+						
+						<p>Les échanges d'informations entre une routine et une sous-routine peuvent se faire par l'intermédiaire des variables globales. Mais il est beaucoup plus intéressant d'utiliser les <span class="gras">paramètres</span> :</p>
+						
+						<div class="quote">
+						
+							<p>PROGRAM machin (input,output);</p>
+
+							<p>VAR</p>
+							<ul>
+								<li>a, b, c, d : real;</li>
+							</ul>
+							<p>PROCEDURE aff_somme(x,y:real);</p>
+							<p>var z : real;</p>
+							<p>begin</p>
+							<ul>
+								<li>z := x + y;</li>
+								<li>writeln(x ,' + ', y ,' = ', z)</li>
+							</ul>
+							<p>end;</p>
+
+							<p>BEGIN {	programme principal }</p>
+							<ul>
+								<li>writeln('Entrez 4 valeurs :');</li>
+								<li>readln(a,b,c,d); </li>
+								<li>aff_somme(a,b); </li>
+								<li>aff_somme(3,5); </li>
+								<li>aff_somme(c+a,d) </li>
+							</ul>
+							<p>END.</p>
+						
+						</div>
+						
+						<p>En appelant <span class="fond">AFF_SOMME(A,B)</span>, la procédure prend pour <span class="fond">x</span> la valeur de <span class="fond">a</span>, et pour <span class="fond">y</span> la valeur de <span class="fond">b</span>. On dit que les arguments sont <span class="gras">passés par valeur</span>. Mais si la procédure modifiait <span class="fond">x</span> ou <span class="fond">y</span>, <span class="fond">a</span> et <span class="fond">b</span> ne seraient pas modifiés dans le programme appelant. Pour répercuter les modifications des arguments, il faut les déclarer comme <span class="gras">variables</span> (ils sont alors dits <span class="gras">passés par adresse</span>).</p>
+						
+						<div class="quote">
+						
+							<p>PROCEDURE echange (VAR x, y : real);</p> 
+							<p>var z : real;</p> 
+							<p>begin</p> 
+							<ul>
+								<li>z := x;</li> 
+								<li>x := y; </li>
+								<li>y := z </li>
+							</ul>
+							<p>end; {cette procédure échange les contenus des 2 arguments}</p>
+						
+						</div>
+						
+						
+						<h3><a href="#haut">#</a></h3>
+					
+					</article>
+					<!-- Fin Sous categorie-->
+					
+					<!--Sous categorie-->
+					<article>
+					
+						<h3 id="LesFonctions">Les fonctions</h3>
+						
+						<p>Tout ce qui a été dit pour les procédures s'applique également aux fonctions. La différence avec une procédure est qu'une fonction <span class="gras">renvoie un résultat</span>.</p>
+						
+						<p>L'entête est du type :</p>
+						
+						<div class="quote">
+						
+							<p>FUNCTION nom_fonction (liste_parametres) : type_de_la_fonction</p>
+						
+						</div>
+						
+						<p>La liste des paramètres (en général passés par valeur) est de la même forme que pour une procédure, le type de la fonction étant le type du résultat retourné. On retourne le résultat par :</p>
+						
+						<div class="quote">
+						
+							<p>NOM_FONCTION := ...</p>
+						
+						</div>
+						
+						<p><span class="souligne">Exemple</span> :</p>
+						
+						<div class="quote">
+						
+							<p>PROGRAM classer (input,output);</p>
+
+							<p>VAR a, b, c : real; </p>
+
+							<p>FUNCTION max (x, y : real) : real;</p> 
+							<p>begin</p> 
+							<ul>
+								<li>if x >= y then </li>
+								<ul>
+									<li>max := x </li>
+								</ul>
+								<li>else max := y </li>
+							</ul>
+							<p>end;</p>
+
+							<p>BEGIN</p>
+							<ul>
+								<li>writeln('Entrez deux valeurs : ');</li>
+								<li>readln(a,b);</li>
+								<li>c := max(a,b); </li>
+								<li>writeln('Le plus grand est ',c)</li>
+							</ul>
+							<p>END.</p>
+						
+						</div>
+						
+						<p>La fonction <span class="fond">max</span> a deux paramètres réels (<span class="fond">x</span> et <span class="fond">y</span>) et renvoie un réel.</p>
+
+						<h3><a href="#haut">#</a></h3>
+					</article>
+					<!-- Fin Sous categorie-->
+				
+				</section>
+				<!--Fin Categorie-->
+				
+				<!--Categorie-->
+				<section class="categorie">
+				
+					<h3 id="Correction">Correction des exercices</h3>
+					
+					<!--Sous categorie-->
+					<article>
+					
+						<h3 id="puiss">ex_puiss</h3>
+						
+						<div class="quote">
+						
+						<p>PROGRAM puissances (input, output);</p>
+						<p>VAR</p> 
+						<ul>
+							<li>n, max : integer;</li>
+						</ul>
+						<p>BEGIN</p>
+						<ul>
+							<li>writeln('Nombre maxi ? ');</li>
+							<li>readln(max);</li>
+							<li>n := 2;</li>
+							<li>while n &lt;= max do begin</li>
+							<ul>
+								<li>writeln(n);</li>
+								<li>n := n * 2</li>
+							</ul>
+							<li>end;</li>
+							<li>writeln('C''est fini')</li>
+						</ul>
+						<p>END.</p>
+						
+						</div>
+						<h3><a href="#haut">#</a></h3>
+					</article>
+					<!-- Fin Sous categorie-->
+					
+					<!--Sous categorie-->
+					<article>
+					
+						<h3 id="jeu">ex_jeu</h3>
+						
+						<div class="quote">
+						
+						<p>PROGRAM jeu (input, output);</p>
+						<p>VAR</p> 
+						<ul>
+							<li>choix, rep, nb : integer;</li>
+						</ul>
+						<p>BEGIN</p>
+						<ul>
+							<li>nb := 0;</li>
+							<li>choix := random(11);</li>
+							<li>repeat</li>
+							<ul>
+								<li>nb := nb + 1;</li>
+								<li>writeln('Choix ndeg. ', nbr, ' ? ');</li>
+								<li>readln(rep)</li>
+							</ul>
+							<li>until rep = choix;</li>
+							<li>writeln('Trouvé en ', nb, ' coups');</li>
+							</ul>
+						</ul>
+						<p>END.</p>
+						
+						</div>
+						<h3><a href="#haut">#</a></h3>
+					</article>
+					<!-- Fin Sous categorie-->
+					
+					<!--Sous categorie-->
+					<article>
+					
+						<h3 id="moy">ex_moy</h3>
+						
+						<div class="quote">
+						
+						<p>PROGRAM moyenne (input, output);</p>
+						<p>VAR</p> 
+						<ul>
+							<li>n, i : integer;</li>
+							<li>note, total, moyenne : real;</li>
+						</ul>
+						<p>BEGIN</p>
+						<ul>
+							<li>writeln('Nombre notes à entrer ?');</li>
+							<li>readln(n);</li>
+							<li>total := 0;</li>
+							<li>for i := 2 to n do</li>
+							<li>begin</li>
+							<ul>
+								<li>writeln('i , 'ième note ? ');</li>
+								<li>readln(note);</li>
+								<li>total := total + note</li>
+							</ul>
+							<li>moyenne := total / n;</li>
+							<li>writeln('La moyenne est : ', moyenne)</li>
+						</ul>
+						<p>END.</p>
+						
+						</div>
+						<h3><a href="#haut">#</a></h3>
+					</article>
+					<!-- Fin Sous categorie-->
+					
+					<!--Sous categorie-->
+					<article>
+					
+						<h3 id="jeu_bis">ex_jeu_bis</h3>
+						
+						<div class="quote">
+						
+						<p>PROGRAM jeu_ameliore (input, output);</p>
+						<p>VAR</p> 
+						<ul>
+							<li>choix, rep, nb : integer;</li>
+						</ul>
+						<p>BEGIN</p>
+						<ul>
+							<li>nb := 0;</li>
+							<li>choix := random(11);</li>
+							<li>repeat</li>
+							<ul>
+								<li>nb := nb +1;</li>
+								<li>writeln('Choix ndeg. ', nb, ' ? ');</li>
+								<li>readln(rep);</li>
+								<li>if rep &lt; choix then</li>
+								<ul>
+									<li>writeln('c''est plus')</li>
+								</ul>
+								<li>else if rep > choix then</li>
+								<ul>
+									<li>writeln('c''est moins');</li>
+									<li>{ le 2ème if empêche d'écrire si juste }</li>
+								</ul>
+							</ul>
+							<li>until rep = choix;</li>
+							<li>writeln('Juste en ', nb, ' coups')</li>
+						</ul>
+						<p>END.</p>
+						
+						</div>
+						<h3><a href="#haut">#</a></h3>
+					</article>
+					<!-- Fin Sous categorie-->
+					
+					<!--Sous categorie-->
+					<article>
+					
+						<h3 id="calc">ex_calc</h3>
+						
+						<div class="quote">
+						
+						<p>PROGRAM calculatrice (input, output);</p>
+						<p>VAR</p> 
+						<ul>
+							<li>val1, val2, resultat : real;</li>
+							<li>operation : char;</li>
+						</ul>
+						<p>BEGIN</p>
+						<ul>
+							<li>writeln('Première valeur ?');</li>
+							<li>readln(val1);</li>
+							<li>writeln('Opération (+ - * /) ? ');</li>
+							<li>readln(operation)</li>
+							<li>writeln('Deuxième valeur ? ');</li>
+							<li>readln(val2);</li>
+							<li>case operation of</li>
+							<ul>
+								<li>'+' : resultat := val1 + val2;</li>
+								<li>'-' : resultat := val1 - val2;</li>
+								<li>'*' : resultat := val1 * val2;</li>
+								<li>'/' : resultat :=v al1 / val2</li>
+							</ul>
+							<li>end;</li>
+							<li>writeln('Résultat : ', resultat)</li>
+						</ul>
+						<p>END.</p>
+						
+						</div>
+						<h3><a href="#haut">#</a></h3>
+					</article>
+					<!-- Fin Sous categorie-->
+					
+					<!--Sous categorie-->
+					<article>
+					
+						<h3 id="moy_a">moy_a</h3>
+						
+						<div class="quote">
+						
+						<p>PROGRAM moyenne (input, output);</p>
+						<p>VAR</p> 
+						<ul>
+							<li>n, compteir : integer;</li>
+							<li>somme, moy, ecart : real;</li>
+							<li>note : array [1..100] of real;</li>
+						</ul>
+						<p>BEGIN</p>
+						<ul>
+							<li>repeat</li>
+							<ul>
+								<li>writeln('nb notes (100 maxi)?');</li>
+								<li>readln(n)</li>
+							</ul>
+							<li>until (n > 0) and (n &lt;= 100);</li>
+							<li>{entrée notes et calcul de la somme}</li>
+							<li>somme := 0;</li>
+							<li>for compteur := 1 to n do</li>
+							<li>begin</li>
+							<ul>
+								<li>writeln(compteur,'è note ?');</li>
+								<li>readln(note[compteur]);</li>
+								<li>somme := somme + note[compteur]</li>
+							</ul>
+							<li>end;</li>
+							<li>{calcul et affichage de la moyenne}</li>
+							<li>moy := somme / n;</li>
+							<li>writeln('Moyenne : ',moy);</li>
+							<li>{calcul et affichage des écarts}</li>
+							<li>writeln('Ecarts :');</li>
+							<li>for compteur := 1 to n do</li>
+							<li>begin</li>
+							<ul>
+								<li>ecart := note[compteur] - moy;</li>
+								<li>writeln(compteur,'ième note (',note[compteur],') : écart : ',ecart)</li>
+							</ul>
+							<li>end</li>
+						</ul>
+						<p>END.</p>
+						
+						</div>
+						<h3><a href="#haut">#</a></h3>
+					</article>
+					<!-- Fin Sous categorie-->
+					
+					<!--Sous categorie-->
+					<article>
+					
+						<h3 id="rot_b">rot_b</h3>
+						
+						<div class="quote">
+						
+						<p>PROGRAM rotation (input, output);</p>
+						<p>VAR</p> 
+						<ul>
+							<li>index, n : integer;</li>
+							<li>prem : real;</li>
+							<li>tableau : array [1..100] of real;</li>
+						</ul>
+						<p>BEGIN</p>
+						<ul>
+							<li>repeat</li>
+							<ul>
+								<li>writeln('Nb valeurs (100 maxi) ?');</li>
+								<li>readln(n)</li>
+							</ul>
+							<li>until (n > 0) and (n &lt;= 100);</li>
+							<li>{ entrée des valeurs }</li>
+							<li>for index := 1 to n do</li>
+							<li>begin</li>
+							<ul>
+								<li>writeln(index,'ième valeur ?');</li>
+								<li>readln(tableau[index]);</li>
+							</ul>
+							<li>end;</li>
+							<li>writeln('On décale vers le haut');</li>
+							<li>prem := tableau[1]; { ne pas écraser ! }</li>
+							<li>for index := 2 to n do</li>
+							<ul>
+								<li>tableau[index - 1] := tableau[index];</li>
+								<li>tableau[n] := prem;</li>
+							</ul>
+							<li>for index := 1 to n do</li>
+							<ul>
+								<li>writeln(tableau[index]);</li>
+								<li>writeln('on re-décale vers le bas');</li>
+								<li>prem := tableau[n];</li>
+							</ul>
+							<li>for index := n downto 2 do</li>
+							<ul>
+								<li>tableau[index] := tableau[index - 1];</li>
+								<li>tableau[1] := prem;</li>
+							</ul>
+							<li>for index := 1 to n do</li>
+							<ul>
+								<li>writeln(tableau[index])</li>
+							</ul>
+						</ul>
+						<p>END.</p>
+						
+						</div>
+						<h3><a href="#haut">#</a></h3>
+					</article>
+					<!-- Fin Sous categorie-->
+					
+					<!--Sous categorie-->
+					<article>
+					
+						<h3 id="clas_c">clas_c</h3>
+						
+						<div class="quote">
+						
+						<p>PROGRAM classer (input, output);</p>
+						<p>VAR</p> 
+						<ul>
+							<li>n, i, index, petit, indexpetit : integer;</li>
+							<li>avant, apres : array [1..100] of integer;
+							<li>pris : array [1..100] of boolean;</li>
+							<li>{ pour noter ceux déjà pris }</li>
+						</ul>
+						<p>BEGIN</p>
+						<ul>
+							<li>repeat</li>
+							<ul>
+								<li>writeln('Nb valeurs (100 maxi) ?');</li>
+								<li>readln(n)</li>
+							</ul>
+							<li>until (n > 0) and (n &lt;= 100);</li>
+							<li>{ entrée valeurs - initialisation de pris }</li>
+							<li>for index := 1 to n do </li>
+							<li>begin</li>
+							<ul>
+								<li>writeln(index,'ième valeur ? ');</li>
+								<li>readln(avant[index]);</li>
+								<li>pris[index] := false</li>
+							</ul>
+							<li>end;</li>
+							<li>{ ordre croissant,on cherche N valeurs }</li>
+							<li>for i := 1 to n do</li>
+							<li>begin</li>
+							<ul>
+								<li>petit := maxint; { plus grand possible }</li>
+								<li>{ recherche du plus petit non pris }</li>
+								<li>for index := 1 to n do</li>
+								<ul>
+									<li>if (not pris[index]) and (avant[index] &lt;= petit) then</li>
+									<li>begin</li>
+									<ul>
+										<li>petit := avant[index];</li>
+										<li>indexpetit := index</li>
+									</ul>
+									<li>end;</li>
+									<li>{ sauvegarde dans le tableau APRES et mise à jour de PRIS }</li>
+									<li>apres[i] := petit;</li>
+									<li>pris[indexpetit] := true</li>
+								</ul>
+							</ul>
+							<li>end; { passage au prochain i }</li>
+							<li>{ affichage du tableau APRES }</li>
+							<li>writeln('Par ordre croissant : ');</li>
+							<li>for i := 1 to N do writeln(apres[i]);</li>
+							<li>{ classement par ordre décroissant }</li>
+							<li>writeln('Par ordre décroissant : ');</li>
+							<li>for i := n downto 1 do writeln(apres[i])</li>
+							<li>{ n'auriez-vous pas tout refait ? }</li>
+						</ul>
+						<p>END.</p>
+						
+						</div>
+						<h3><a href="#haut">#</a></h3>
+					</article>
+					<!-- Fin Sous categorie-->
+					
+					<!--Sous categorie-->
+					<article>
+					
+						<h3 id="ex_str">ex_str</h3>
+						
+						<div class="quote">
+						
+						<p>PROGRAM position (input, output);</p>
+						<p>VAR</p> 
+						<ul>
+							<li>ch, sch : string;</li>
+							<li>i, j, n, l, ls : integer;</li>
+						</ul>
+						<p>BEGIN</p>
+						<ul>
+							<li>writeln('Chaîne à tester ? ');</li>
+							<li>readln(ch);</li>
+							<li>writeln('Sous-chaîne à trouver ?');</li>
+							<li>readln(sch);</li>
+							<li>l := length(ch);</li>
+							<li>ls := length(sch);</li>
+							<li>n := 0;</li>
+							<li>for i := 1 to l - ls do</li>
+							<li>begin</li>
+							<ul>
+								<li>j := 1;</li>
+								<li>while (j &lt;= l) and (ch[i + j - 1] = sch[j]) do</li>
+								<ul>
+									<li>j := j + 1;</li>
+									<li>if j > ls then</li>
+									<li>begin</li>
+									<ul>
+										<li>writeln('Trouvé position ',i);</li>
+										<li>n := n + 1</li>
+									</ul>
+									<li>end</li>
+								</ul>
+								<li>end;</li>
+							</ul>
+							<li>writeln(n,' fois ',sch,' dans ',ch)</li>
+						</ul>
+						<p>END.</p>
+						
+						</div>
+						<h3><a href="#haut">#</a></h3>
+					</article>
+					<!-- Fin Sous categorie-->
+					
+					<!--Sous categorie-->
+					<article>
+					
+						<h3 id="mat">mat</h3>
+						
+						<div class="quote">
+						
+						<p>PROGRAM produit_mat (input, output);</p>
+						<p>VAR</p> 
+						<ul>
+							<li>m1, m2, m3 : array [1..10,1..10] of real;</li>
+							<li>l, m, n, jl, jm, jn : integer;</li>
+						</ul>
+						<p>BEGIN</p>
+						<ul>
+							<li>writeln('Nb lignes 1ère matrice ?');</li>
+							<li>readln(m);</li>
+							<li>writeln('Nb colonnes 1è matrice ?');</li>
+							<li>readln(l);</li>
+							<li>writeln('Nb colonnes 2è matrice ?');</li>
+							<li>readln(n);</li>
+							<li>{ entrée de m1 }</li>
+							<li>writeln('Première matrice');</li>
+							<li>for jm := 1 to m do</li>
+							<ul>
+								<li>for jl := 1 to l do</li>
+								<li>begin</li>
+								<ul>
+									<li>writeln('lig',jm,', col',jl,'?');</li>
+									<li>readln(m1[jm,jl])</li>
+								</ul>
+								<li>end;</li>
+							</ul>
+							<li>{ entrée de m2 }</li>
+							<li>writeln('2ième matrice');</li>
+							<li>for jl := 1 to l do</li>
+							<ul>
+								<li>for jn := 1 to n do</li>
+								<li>begin</li>
+								<ul>
+									<li>writeln('lig',jl,', col',jn,'?');</li>
+									<li>readln(m2[jl,jn])</li>
+								</ul>
+								<li>end;</li>
+							</ul>
+							<li>{ calcul du produit }</li>
+							<li>for jm := 1 to m do</li>
+							<ul>
+								<li>for jn := 1 to n do</li>
+								<li>begin {calcul composante m,n de m2}</li>
+								<ul>
+									<li>m3[jm,jn] := 0;</li>
+									<li>for jl := 1 to l do</li>
+									<ul>
+										<li>m3[jm,jn] := m3[jm,jn] + (m1[jm,jl] * m2[jl,jn]);</li>
+									</ul>
+								</ul>
+								<li>end;</li>
+							</ul>
+							<li>{ affichage du résultat }</li>
+							<li>writeln('Résultat');</li>
+							<li>for jm := 1 to m do</li>
+							<ul>
+								<li>for jn := 1 to n do</li>
+								<ul>
+									<li>writeln('m[',jm,',',jn,']=',m3[jm,jn])</li>
+								</ul>
+							</ul>
+						</ul>
+						<p>END.</p>
+						
+						</div>
+						<h3><a href="#haut">#</a></h3>
+					</article>
+					<!-- Fin Sous categorie-->
+					
+				
+				</section>
+				<!--Fin Categorie-->
+				
+				
+				
+			</section>
+			<!--Fin Partie droite -->
+			
+		</section>
+		<!-- Fin Section principal -->
+
+
+		<footer>
+			<p>Copyright - Tous droits réservés - Sources : Patrick Trau, IPST, Université Louis Pasteur Strasbourg</p>
+		</footer>
+	
+	</body>
+		
+		
+</html>
