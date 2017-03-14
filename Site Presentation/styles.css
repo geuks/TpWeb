@@ -1,0 +1,160 @@
+/*
+Theme Name: Theme Porfolio ludus1B
+Theme URI: ludus1B.com
+Author: Gokhan UNALAN
+Description: Theme css pour presentation Porfolio Ludus1B
+Version: 1.0
+License: Ludus1B
+License URI: Ludus1B.com
+Text Domain: ludus1B
+*/
+
+body {
+	font-family: Georgia, serif;
+	margin:2% 20% 2% 20%;
+	background-color: #D1D1D1;
+	border:1px solid gray;
+}
+
+a {
+	text-decoration: none;
+	color:#D5D5D5;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/*Menu*/
+header {
+	border: 1px solid black;
+	display:flex;
+	background-color: #4F4F4F;
+}
+
+header p {
+	color:#D5D5D5;
+	text-align: center;
+}
+
+header h1{
+	color:gray;
+	margin:0;
+}
+
+nav li {
+	display: inline-block;
+	background-color: #4F4F4F;
+	border-right: 1px solid gray;
+	box-shadow: 1px -1px 0 gray inset;
+	list-style: none;
+	padding:15px 30px 15px 30px;
+}
+
+nav li a{                  ;
+	color:#D5D5D5;
+	text-shadow: 1px 1px 0 black;
+}
+
+nav li:hover{
+	background-color:#BBBAB4;
+}
+
+.menu:nth-child(1){
+	padding-right:15px;
+	border-right:1px solid gray;
+}
+/*FIN Menu*/
+
+/*Article*/
+article {
+	background-color: #4F4F4F;
+	border: 1px solid black;
+	margin: 2%;
+	margin-top:2%;
+	text-align:center;
+	display:flex;
+	flex-direction:column;
+	justify-content:strech;
+}
+
+article p {
+  font-size: 11px;
+}
+
+#MesProjets {
+	margin: 2%;
+	display:flex;
+}
+
+.SecProjet {
+	margin: 2%;
+}
+
+.SecProjet h1 {
+	text-align:center;
+	background-color:#4F4F4F;
+	border:1px solid black;
+}
+/*FIN Article*/
+
+/*Page Accueil*/
+
+.images {
+	width:100%;
+	height:70%;
+}
+
+.description:nth-child(1) {
+  flex:1;
+}
+
+.description {
+  width:90%;
+  background-color: #D1D1D1;
+  border:1px solid black;
+}
+/*FIN Page Accueil*/
+
+
+/*Projets*/
+.imgProjet {
+	width:70%;
+	margin-left:15%;
+}
+/*FIN Projets*/
+
+/*Partenaires*/
+.imgPartenaire {
+	width: 600px;
+	height: 200px;
+	margin:2% 10%;
+}
+
+.imgPartenaire:hover {
+	border:2px solid black;
+}
+/*FIN Partenaires*/
+
+/*Contact*/
+fieldset
+{
+  background-color:#CCC;
+  max-width:50px;
+  padding:0 16px;
+	margin:2% 30%;
+	border:2px solid gray;
+  border-radius:8px;	
+}
+
+textarea {
+	resize: none;
+}
+/*FIN Contact*/
+
+footer {
+	background-color: #4F4F4F;
+	border:1px solid black;
+	margin-top:2%;
+	text-align:center;
+}
