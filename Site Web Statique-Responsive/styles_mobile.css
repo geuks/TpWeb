@@ -1,0 +1,47 @@
+/*
+Theme Name: Theme Porfolio ludus1B
+Theme URI: ludus1B.com
+Author: Gokhan UNALAN
+Description: Theme css pour presentation Porfolio Ludus1B
+Version: 1.0
+License: Ludus1B
+License URI: Ludus1B.com
+Text Domain: ludus1B
+*/
+
+@media (max-device-width:1280px) and (orientation:portrait){
+	
+	*{
+		font-size:35px;
+	}
+	
+	body {
+		margin:0;
+	}
+	
+	.descriptionP{
+		font-size:15px;
+	}
+	
+	.description {
+		font-size:15px;
+	}
+	
+	nav li {
+		display:inline-table;
+	}
+	
+	article{
+		margin-top: 10%;
+	}
+	#MesProjets {
+		display:block;
+		justify-content:initial;
+	}
+	
+	fieldset
+	{
+		margin:2% auto;
+	}
+
+}
