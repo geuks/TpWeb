@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Bulls &amp; Cows</title>
+        <meta charset="utf-8" />
+        <link href="styles.css" media="screen" rel="stylesheet" type="text/css">
+				 <script type="text/javascript" src="script.js" ></script>
+    </head>
+
+    <body onLoad="main();">
+
+        <header>
+					<img src="images/banniere2.png" alt="bull&cows">
+        </header>
+				
+				<br id="jeu"></br>
+				<div id="temps">
+					<span id="heures">00</span> :
+					<span id="minutes">00</span> :
+					<span id="secondes">00</span>
+				</div>
+
+        <article>
+					<fieldset>
+						<table>
+							<tbody>
+								<caption>Nombre</caption>
+								<tr>
+									<td><input class="bullscows" onfocus="select();" type="text" id="nbr1" onkeyup="testChar(); return(x);" onkeypress="VerifTouche(event); return x;" maxlength="1"/></td>
+									<td><input class="bullscows" onfocus="select();" type="text" id="nbr2" onkeyup="testChar(); return(x);" onkeypress="VerifTouche(event); return x;" maxlength="1"/></td>
+									<td><input class="bullscows" onfocus="select();" type="text" id="nbr3" onkeyup="testChar(); return(x);" onkeypress="VerifTouche(event); return x;" maxlength="1"/></td>
+									<td><input class="bullscows" onfocus="select();" type="text" id="nbr4" onkeyup="testChar(); return(x);" onkeypress="VerifTouche(event); return x;" maxlength="1"/></td>
+								</tr>
+								
+							</tbody>
+						</table>
+						
+						<form method="post" id="myForm">
+							<input type="submit" onclick="Check(); window.location.hash='jeu'; return false;" value="Verifier" id="check" />
+							<input type="submit" value="Recommencer" id="raz" onclick="window.location.hash='jeu';"/>
+						</form>
+						
+						
+						<table>
+
+							<thead>
+								<tr>
+									<th>Essai</th>
+									<th>Bulls</th>
+									<th>Cows</th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr>
+									<td><input class="essai" type="text" id="essai_1" disabled /></td>
+									<td><input class="bullscows" type="text" id="bull_1" disabled /></td>
+									<td><input class="bullscows" type="text" id="cows_1" disabled /></td>
+								</tr>
+
+								<tr>
+									<td><input class="essai" type="text" id="essai_2" disabled /></td>
+									<td><input class="bullscows" type="text" id="bull_2" disabled /></td>
+									<td><input class="bullscows" type="text" id="cows_2" disabled /></td>
+								</tr>
+								
+								<tr>
+									<td><input class="essai" type="text" id="essai_3" disabled /></td>
+									<td><input class="bullscows" type="text" id="bull_3" disabled /></td>
+									<td><input class="bullscows" type="text" id="cows_3" disabled /></td>
+								</tr>
+								
+								<tr>
+									<td><input class="essai" type="text" id="essai_4" disabled /></td>
+									<td><input class="bullscows" type="text" id="bull_4" disabled /></td>
+									<td><input class="bullscows" type="text" id="cows_4" disabled /></td>
+								</tr>
+
+								<tr>
+									<td><input class="essai" type="text" id="essai_5" disabled /></td>
+									<td><input class="bullscows" type="text" id="bull_5" disabled /></td>
+									<td><input class="bullscows" type="text" id="cows_5" disabled /></td>
+								</tr>
+								
+								<tr>
+									<td><input class="essai" type="text" id="essai_6" disabled /></td>
+									<td><input class="bullscows" type="text" id="bull_6" disabled /></td>
+									<td><input class="bullscows" type="text" id="cows_6" disabled /></td>
+								</tr>
+								
+								<tr>
+									<td><input class="essai" type="text" id="essai_7" disabled /></td>
+									<td><input class="bullscows" type="text" id="bull_7" disabled /></td>
+									<td><input class="bullscows" type="text" id="cows_7" disabled /></td>
+								</tr>
+							</tbody>
+
+						</table>
+						
+						<table>
+							<tbody>
+								<caption>Resultat</caption>
+								<tr>
+									<td><input class="essai" value="????" type="text" name="resultat" id="resultat" disabled /></td>
+								</tr>
+								
+							</tbody>
+
+						</table>
+					</fieldset>
+					
+        </article>
+
+
+
+        <footer>
+						<img src="images/footer.png" alt="bull&cows">
+        </footer>
+
+    </body>
+</html>

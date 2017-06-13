@@ -1,0 +1,74 @@
+/*
+Theme Name: Theme Porfolio ludus1B
+Theme URI: ludus1B.com
+Author: Gokhan UNALAN
+Description: Theme css pour presentation Porfolio Ludus1B
+Version: 1.0
+License: Ludus1B
+License URI: Ludus1B.com
+Text Domain: ludus1B
+*/
+
+body {
+	font-family: Georgia, serif;
+	margin:2% 20% 2% 20%;
+	background-color: #D1D1D1;
+	border:1px solid gray;
+}
+
+
+img {
+	width:100%;
+	height:100%;
+	margin:0;
+}
+
+.essai {
+	border: 3px solid black;
+	background: green;
+	color: orangered;
+	width:100px;
+	letter-spacing: 4px;        
+	text-shadow: 0 0 2px black;       
+	word-spacing: 20px;   
+	cursor: pointer;
+	text-align: center;
+	font-size:30px;
+}
+
+.bullscows {
+	border: 3px solid black;
+	background: green;
+	color: orangered;
+	width:30px;
+	letter-spacing: 4px;        
+	text-shadow: 0 0 2px black;       
+	word-spacing: 20px;   
+	cursor: pointer;
+	text-align: center;
+	font-size:30px;
+	margin-left:5px;
+}
+
+table {
+	margin: auto;
+}
+
+#temps{
+	text-align:center;
+}
+
+input[type=submit]{
+	cursor: pointer;
+	margin:auto;
+	background: orange;
+	padding: 8px 15px 8px 15px;
+	border: 1 px;
+	color: #fff;
+}
+
+fieldset {
+	height:auto;
+	width:20%;
+	margin:2% auto;
+}
